@@ -25,10 +25,10 @@ df_long.to_csv("weather.csv")
 df = pd.read_csv(
     "/Users/mauro/Documents/Data Visualization/Data_viz/weather.csv", index_col='yyyy')
 
-
+sns.set()
 fig, ax = plt.subplots(figsize=(7, 10), tight_layout=True)
 plt.rcParams.update({'font.size': 22})
-fig.suptitle('Maximun Temperatures in Glasgow (1959-2021)',
+fig.suptitle('Maximum Temperatures in Glasgow (1959-2021)',
              fontsize=16, fontweight='bold')
 ax.set_title('Maximum monthly temperature in celsius ')
 ax.spines.right.set_visible(False)
@@ -36,11 +36,13 @@ ax.spines.top.set_visible(False)
 ax.spines.bottom.set_visible(False)
 ax.spines.left.set_visible(False)
 plt.yticks(fontsize=14)
+msg='Visualization by Mauro Pazmino'
+fig.text(0.5,0,msg,size=13,color='gray',transform=ax.transAxes)
 
 plt.tick_params(axis='x', which='both', bottom=False,
                 top=False, labelbottom=False)
 
-bcr.bar_chart_race(df=df, filename='bar.mp4', cmap='gnuplot', fig=fig,
+bcr.bar_chart_race(df=df[:10], filename='bar.mp4', cmap='gnuplot', fig=fig,
                    bar_label_size=14, steps_per_period=20, period_length=500)
 
 
