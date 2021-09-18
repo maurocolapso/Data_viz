@@ -1,2 +1,2 @@
 # Data_viz
-Data visualisation projects 
+Repository with all my data visualization side projects in python
