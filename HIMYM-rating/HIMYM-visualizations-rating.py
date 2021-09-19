@@ -54,7 +54,7 @@ plt.show()
 seasons = np.arange(1,10,1)
 fig,ax = plt.subplots()
 ax.set_ylabel('Episode number')
-ax.set_xlabel("Rating")
+ax.set_xlabel("Rating")#mmm
 
 for season in seasons: 
     plt.stem(df[df['season'] == season]['episode_number_total'],df[df['season'] == season]['rating'],bottom=mean_season_rating.iloc[season-1])
