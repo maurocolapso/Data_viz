@@ -1,6 +1,7 @@
 # Data visualization side projects
-====================================
+
 Repository with all my data visualization side projects in python.
+
 ## Covid cases in Scotland
 Plot of current cases and 7 day rolling window in the style of BCCC
 
