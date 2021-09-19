@@ -35,54 +35,54 @@ ax.text(0, 27, "Data Visualization: Mauro Pazmino/Data: IMDb", fontsize=12, colo
 #plt.show()
 fig.savefig('/Users/mauro/Documents/Data Visualization/Data_viz/HIMYM-rating/HIMYM_rating.png',bbox_inches ='tight')
 
-number_total = np.arange(0,208,1)
-plt.stem(number_total[10],df['rating'])
-plt.show()
-plt.plot(number_total, df['rating'])
-plt.show()
-
-df['episode_number_total'] = number_total
-df.set_index('episode_number_total',inplace=True)
-column = df["rating"]
-max_index = column.idxmax()
-min_index = column.idxmin()
-df.iloc[min_index]
-
-df.iloc[min_index]
-df.iloc[max_index]
-
-df = pd.read_csv('/Users/mauro/Documents/Data Visualization/Data_viz/HIMYM-rating/HIMYM_episodes_info.csv')
-mean_season_rating = df.groupby('season')['rating'].mean()
-number_total = np.arange(1,209,1)
-df['episode_number_total'] = number_total
-
-color=['#d1d1d1','k']
-first_season = df[df['season'] == 1]
-second_season = df[df['season'] == 2]
-plt.stem(first_season['episode_number_total'],first_season['rating'],
-         color[0],bottom=mean_season_rating.iloc[0],basefmt=color[0],markerfmt='blueo')
-plt.stem(second_season['episode_number_total'],second_season['rating'],
-         color[1],bottom=mean_season_rating.iloc[1],basefmt=color[1],markerfmt=color[1])
-plt.show()
-
-plt.hlines()
-
-
-seasons = np.arange(1,10,1)
-fig,ax = plt.subplots()
-ax.set_ylabel('Episode number')
-ax.set_xlabel("Rating")#mmm
-
-for season in seasons: 
-    plt.stem(df[df['season'] == season]['episode_number_total'],df[df['season'] == season]['rating'],
-             bottom=mean_season_rating.iloc[season-1])
-plt.show()
-
-plt.hlines(y=mean_season_rating.iloc[0],xmin=1,xmax=22) #first and last episode
-plt.vlines(x=1,ymin=mean_season_rating.iloc[0],ymax=10) #rating
-plt.vlines(x=2,ymin=mean_season_rating.iloc[0],ymax=7)
-
-#plt.hlines(y=mean_season_rating.iloc[1],xmin=24,xmax=40)
+#number_total = np.arange(0,208,1)
+#plt.stem(number_total[10],df['rating'])
+#plt.show()
+#plt.plot(number_total, df['rating'])
+#plt.show()
+#
+#df['episode_number_total'] = number_total
+#df.set_index('episode_number_total',inplace=True)
+#column = df["rating"]
+#max_index = column.idxmax()
+#min_index = column.idxmin()
+#df.iloc[min_index]
+#
+#df.iloc[min_index]
+#df.iloc[max_index]
+#
+#df = pd.read_csv('/Users/mauro/Documents/Data Visualization/Data_viz/HIMYM-rating/HIMYM_episodes_info.csv')
+#mean_season_rating = df.groupby('season')['rating'].mean()
+#number_total = np.arange(1,209,1)
+#df['episode_number_total'] = number_total
+#
+#color=['#d1d1d1','k']
+#first_season = df[df['season'] == 1]
+#second_season = df[df['season'] == 2]
+#plt.stem(first_season['episode_number_total'],first_season['rating'],
+#         color[0],bottom=mean_season_rating.iloc[0],basefmt=color[0],markerfmt='blueo')
+#plt.stem(second_season['episode_number_total'],second_season['rating'],
+#         color[1],bottom=mean_season_rating.iloc[1],basefmt=color[1],markerfmt=color[1])
+#plt.show()
+#
+#plt.hlines()
+#
+#
+#seasons = np.arange(1,10,1)
+#fig,ax = plt.subplots()
+#ax.set_ylabel('Episode number')
+#ax.set_xlabel("Rating")#mmm
+#
+#for season in seasons: 
+#    plt.stem(df[df['season'] == season]['episode_number_total'],df[df['season'] == season]['rating'],
+#             bottom=mean_season_rating.iloc[season-1])
+#plt.show()
+#
+#plt.hlines(y=mean_season_rating.iloc[0],xmin=1,xmax=22) #first and last episode
+#plt.vlines(x=1,ymin=mean_season_rating.iloc[0],ymax=10) #rating
+#plt.vlines(x=2,ymin=mean_season_rating.iloc[0],ymax=7)
+#
+##plt.hlines(y=mean_season_rating.iloc[1],xmin=24,xmax=40)
 
 plt.show()
 
