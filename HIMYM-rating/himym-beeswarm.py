@@ -10,7 +10,7 @@ df_season_episode["season"] = df_season_episode["season"].astype(str)
 
 fig,ax=plt.subplots(figsize=(12,7))
 sns.set(style='white')
-sns.swarmplot(x="rating",y='season',data=df_season_episode,size=6,ax=ax)
+sns.swarmplot(x="rating",y='season',data=df_season_episode,size=6,edgecolor='k',alpha=0.6,ax=ax)
 ax.set(ylabel='Seasons', xlabel='IMDb rating')
 fig.text(0, 0.95, "How I Met Your Mother", fontsize=25, fontweight='bold',transform=fig.transFigure)
 fig.text(0, 0.9, "IMDb rating per episode", fontsize=18, color='gray',transform=fig.transFigure)
@@ -21,7 +21,7 @@ plt.annotate('Tick Tick Tick', xy=(9.5, 7), xytext=(10, 6.5),
              arrowprops=dict(facecolor='k', connectionstyle="angle3"),
              )
 plt.grid()
-#plt.show()
+plt.show()
 fig.savefig('/Users/mauro/Documents/Data Visualization/Data_viz/HIMYM-rating/HIMYM_beeswarm.png',bbox_inches ='tight')
 
 
