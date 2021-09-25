@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 from datetime import datetime
 from matplotlib.transforms import Transform
 
+# unemployment
 url = "/Users/mauro/Documents/Data Visualization/Data_viz/Ecuador/Data/202108_Tabulados_Mercado_Laboral_EXCEL.xlsx"
 df = pd.read_excel(url, sheet_name=2, skiprows=2)
 df.columns = ['Encuesta', "Periodo", 'Indicadores',
@@ -64,9 +65,60 @@ plt.show()
 
 
 
+# trends between formal and informal labour
+url = "/Users/mauro/Documents/Data Visualization/Data_viz/Ecuador/Data/202108_Tabulados_Mercado_Laboral_EXCEL.xlsx"
+df_2 = pd.read_excel(url, sheet_name=3, skiprows=1)
+df_2.head()
+
+dates = df_desempleo_copy["Periodo"].reset_index(drop=True)
+x = df_2.iloc[21:23,1:].T.reset_index(drop=True)
+x.columns = ['Sector Formal',"Sector Informal"]
+x = x.drop(0,axis=0)
+x = x.reset_index(drop=True)
+x["Periodo"] = dates
+x = x.set_index('Periodo')
+x = x*100
+
+colors = ['#1d70b8','gray']
+fig,ax = plt.subplots(figsize=(8,5),facecolor=background_color)
+sn.lineplot(data=x,legend=False,palette=colors)
+sn.despine()
+ax.axvline(datetime(2017,5,24),color='k',ls='--')
+ax.axvline(datetime(2021,5,24),color='k',ls='--')
+ax.set_facecolor(background_color)
+
+ax.text(0.15, 0.1, 'Sector Informal', fontfamily='arial', fontsize=15, fontweight='bold',
+        ha='left', va='bottom', color=hombres,transform = ax.transAxes)
+ax.text(0.15, 0.7, 'Sector Formal', fontfamily='arial', fontsize=15, fontweight='bold',
+        ha='left', va='bottom', color=mujeres,transform = ax.transAxes)
+ax.text(0, 1.05, 'Caracterizacion del Empleo en el Ecuador', fontfamily='arial', fontsize=20, fontweight='bold',
+        ha='left', va='bottom',transform = ax.transAxes)
+ax.text(0, 1, 'Porcentaje de Empleo formal e informal desde 2007 hasta 2021', fontfamily='arial', fontsize=15, fontweight='bold',
+        ha='left', va='bottom',color='gray',transform = ax.transAxes)
+
+#ax.text(0.2, 0.9, 'Presidencia: R. Correa', fontfamily='arial', fontsize=10, fontweight='bold',
+#        ha='left', va='bottom',transform = ax.transAxes)
+#ax.text(0.7, 0.9, 'Presidencia: L. Moreno', fontfamily='arial', fontsize=10, fontweight='bold',
+#        ha='left', va='bottom',transform = ax.transAxes)
+fig.savefig('/Users/mauro/Documents/Data Visualization/Data_viz/Ecuador/Formal_Informal.png',bbox_inches ='tight')  
+plt.show()
 
 
+df.columns = ['Encuesta', "Periodo", 'Indicadores',
+    'Total', 'Urbana', 'Rural', "Hombre", 'Mujer']
 
+np.random.seed(23)
+observations = 75
+df=pd.DataFrame(dict(A=np.random.uniform(low=-1, high=1.1, size=observations).tolist(),
+                    B=np.random.uniform(low=-1, high=1.1, size=observations).tolist(),
+                    C=np.random.uniform(low=-1, high=1.1, size=observations).tolist(),
+                    ))
+df.iloc[0,] = 0
+df = df.cumsum()
+
+firstdate = datetime(2020,1,1)
+df['date'] = pd.date_range(firstdate, periods=df.shape[0]).tolist()
+df.set_index('date', inplace=True)
 
 
 
