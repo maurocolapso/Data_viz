@@ -1,5 +1,10 @@
-import import_ir_files
+from inspect import Parameter
+from Prepo import Savitskyau
+import pandas as pd
+import numpy as np
+from scipy.signal import savgol_filter
 
-a = '/Users/mauro/Documents/Data Visualization/Data_viz/NIRS/Raw_files/*.dpt'
-b = 'victory_test2'
-import_ir_files.import_ir(a,b)
+X=10
+
+classes_tested = Prepo.Savitskyau(9)
+ahora = classes_tested.transform(X)

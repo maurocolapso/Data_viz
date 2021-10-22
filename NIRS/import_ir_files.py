@@ -18,7 +18,7 @@ w = data_file[:, 0]  # wavenumbers (wavelength range)
 print("Loading files...")
 dfList = []
 for filename in tqdm(filepath):
-#print(filename)
+    # print(filename)
     df = pd.read_csv(filename, header=None, delimiter='\t', usecols=[1])
     dfList.append(df)
 concatanedDf = pd.concat(dfList, axis=1)
@@ -43,7 +43,7 @@ for filename in file_list:
 
 # build the data frame for Orange or Machine learning uses
 
-w_round = np.ceil(w).astype(int) # round wavenumbers
+w_round = np.ceil(w).astype(int)  # round wavenumbers
 index_df = concatanedDf.set_index(w_round)
 trans_df = index_df.T
 
@@ -57,4 +57,5 @@ trans_df['Sp Part'] = mozziespec
 
 # Export data frame to work in Orange or whatever
 
-export_csv = trans_df.to_csv('/Users/mauro/Documents/Data Visualization/Data_viz/NIRS/Datasets/%s.csv'%final_filename,index=False) 
+export_csv = trans_df.to_csv(
+    '/Users/mauro/Documents/Data-Visualization/Data_viz/NIRS/Datasets/%s.csv' % final_filename, index=False)
