@@ -6,11 +6,11 @@ Repository with all my data visualization side projects using python and R
 ***
 
 ## ⚽️ Footbal picth using Python
-A little fun challenge I found on twitter. Defintely easier to do using R but it is possible in python
+A little fun challenge I found on twitter. Defintely easier to do using R but it is possible with Python. [Code](https://github.com/maurocolapso/Data_viz/tree/main/Footbal)
 ![](Footbal/Football.png)
 
 ## 🇪🇨 Ecuador unnemployment rate
-Plots of formal and informal work and also unemployemnt rate through the last 14 years (in Spanish).
+Plots of formal and informal work and also unemployemnt rate through the last 14 years (in Spanish). [Code](https://github.com/maurocolapso/Data_viz/tree/main/Ecuador)
 ![](Ecuador/Formal_Informal.png)
 ![](Ecuador/Unemployment_rate.png)
 
@@ -23,7 +23,7 @@ The code to scrape the data from IMDb was adapted from Isabella Benabaye [post](
 ![](HIMYM-rating/HIMYM_rating.png)
 
 ## 😷 Covid cases in Scotland
-Plot of COVID-19 cases and 7 day rolling window in the style of BBC. Data from the summer of 2020. Code
+Plot of COVID-19 cases and 7 day rolling window in the style of BBC. Data from the summer of 2020. [Code](https://github.com/maurocolapso/Data_viz/tree/main/Covid-cases-Scotland-(BBC-style)
 ![](Covid-cases-Scotland-(BBC-style)/Covid_cases_scotlandBBC.png)
 
 
