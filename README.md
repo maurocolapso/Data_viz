@@ -26,7 +26,9 @@ The code to scrape the data from IMDb was adapted from Isabella Benabaye [post](
 Plot of COVID-19 cases and 7 day rolling window in the style of BBC. Data from the summer of 2020. [Code](https://github.com/maurocolapso/Data_viz/tree/main/Covid-cases-Scotland-(BBC-style)
 ![](Covid-cases-Scotland-(BBC-style)/Covid_cases_scotlandBBC.png)
 
-
+## 😷 Covid deaths on map
+Map of covid deaths for each council
+![](Covid-deaths-map-scotland/Scotland_maps.png)
 ## Bar chart race
 Barchart race using historic temperature data from Scotland.
 [code](https://github.com/maurocolapso/Data_viz/tree/main/bar-race-max-min-temp-Glasgow)
