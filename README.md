@@ -6,7 +6,7 @@ Repository with all my data visualization side projects using python and R
 ***
 
 ## ⚽️ Footbal picth using Python
-A little fun challenge I found on twitter. Defintely easier to do using R but it is possible with Python. [Code](https://github.com/maurocolapso/Data_viz/tree/main/Footbal)
+A little fun challenge I found on twitter. Defintely easier to do using R but it is possible with Python. [Code](https://github.com/maurocolapso/Data_viz/tree/main/Footbal/Football.py)
 ![](Footbal/Football.png)
 
 ## 🇪🇨 Ecuador unnemployment rate
