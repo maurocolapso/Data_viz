@@ -1,12 +1,14 @@
-# Data visualization side projects
+<h1 style="font-weight:normal" align="center">
+  &nbsp;Data viz side projects&nbsp;
+</h1>
 
-Repository with all my data visualization side projects in python.
-
-## Footbal picth using Python
+Repository with all my data visualization side projects using python and R
+***
+## ⚽️ Footbal picth using Python
 A little fun challenge I found on twitter. Defintely easier to do using R but it is possible in python
 ![](Footbal/Football.png)
 
-## Ecuador data
+## 🇪🇨 Ecuador unnemployment rate
 Plots of formal and informal work and also unemployemnt rate through the last 14 years (in Spanish).
 ![](Ecuador/Formal_Informal.png)
 ![](Ecuador/Unemployment_rate.png)
@@ -19,7 +21,7 @@ The code to scrape the data from IMDb was adapted from Isabella Benabaye [post](
 
 ![](HIMYM-rating/HIMYM_rating.png)
 
-## Covid cases in Scotland
+## 😷 Covid cases in Scotland
 Plot of COVID-19 cases and 7 day rolling window in the style of BBC. Data from the summer of 2020. Code
 ![](Covid-cases-Scotland-(BBC-style)/Covid_cases_scotlandBBC.png)
 
