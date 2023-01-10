@@ -9,7 +9,7 @@ Repository with all my data visualization side projects using python and R
 A little fun challenge I found on twitter. Defintely easier to do using R but it is possible with Python. [Code](https://github.com/maurocolapso/Data_viz/tree/main/Footbal/Football.py)
 ![](Footbal/Football.png)
 
-## 🇪🇨 Ecuador unnemployment rate
+## 🇪🇨 Ecuador unemployment rate
 Plots of formal and informal work and also unemployemnt rate through the last 14 years (in Spanish). [Code](https://github.com/maurocolapso/Data_viz/tree/main/Ecuador)
 ![](Ecuador/Formal_Informal.png)
 ![](Ecuador/Unemployment_rate.png)
