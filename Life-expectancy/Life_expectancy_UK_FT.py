@@ -9,7 +9,7 @@ from matplotlib import font_manager
 # unemployment
 
 df = pd.read_excel(
-    "../Life expectancy/Data/lebylapivot3.xlsx", sheet_name=2, skiprows=3
+    "./Life-expectancy/Data/lebylapivot3.xlsx", sheet_name=2, skiprows=3
 )
 
 df["Area name"] = df["Area name"].str.lower()
@@ -227,7 +227,7 @@ fig.text(
 fig.text(
     x=0,
     y=1.15,
-    s="Boys born in Blackpool can expect tolive just 74 years - the second\nlowest in the UK, and up by just 2.1 years since 2001",
+    s="Boys born in Blackpool can expect to live just 74 years - the second\nlowest in the UK, and up by just 2.1 years since 2001",
     ha="left",
     fontdict={"fontsize": 20, "family": font.name},
 )
@@ -336,5 +336,5 @@ fig.text(
 )
 
 fig.savefig(
-    "../Life expectancy/Life_expectancy_FT_style.png", dpi=300, bbox_inches="tight"
+    "./Life-expectancy/Life_expectancy_FT_style.png", dpi=300, bbox_inches="tight"
 )
