@@ -6,7 +6,7 @@ Repository with all my data visualization side projects using python and R
 ***
 
 ## ⚽️ Life expectancy in the UK
-My attempt in recreate a plot about life expectancy in the UK from the Financial Times [Code](https://github.com/maurocolapso/Data_viz/tree/main/Life-expectancy/life_expctancy_UK_FT.py)
+My attempt in recreate a plot about life expectancy in the UK from the Financial Times [Code](https://github.com/maurocolapso/Data_viz/tree/main/Life-expectancy/Life_expctancy_UK_FT.py)
 ![](Life-expectancy/Life_expectancy_FT_style.png)
 
 ## ⚽️ Footbal pitch using Python
